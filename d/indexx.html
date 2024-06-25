@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Wep</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <diV class="main-div">
+        <div class="inner-div">
+            <h2 class="question">Question come here</h2>
+            <ul>
+                <li>
+                    <input type="radio" name="answer" id="ans1" class="answer">
+                    <lebel for="ans1" id="option1">Answer Option </lebel>
+                </li>
+            <li>
+                <input type="radio" name="answer" id="ans2" class="answer">
+                <lebel for="ans1" id="option2">Answer Option </lebel>
+            </li>
+            <li>
+                <input type="radio" name="answer" id="ans3" class="answer">
+                <lebel for="ans1" id="option3">Answer Option </lebel>
+            </li>
+            <li>
+                <input type="radio" name="answer" id="ans4" class="answer">
+                <lebel for="ans1" id="option4">Answer Option </lebel>
+          </li>
+            </ul>
+
+           <buttton id="submit">submit</buttton>
+           <div id="showScore" class="scoreArea"></div>
+          </div>
+        </diV>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+    *{
+
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "josefin sans", sans-serif;
+font-weight: 300;
+}
+
+html{
+font-size: 62.%;
+
+}
+
+.main-div{
+
+width: 100vw;
+min-height: 100vh;
+display: grid;
+place-items: center;
+background-color: rgb(16, 21, 19);
+}
+
+.inner-div{
+
+width: 40vw;
+background-color: antiquewhite;
+padding: 3rem 8rem;
+border-radius: 1rem;
+/* box-shodow 0 1rem 1rem -0.7rem ; */
+}
+
+.inner-div  h2 {
+font-size: 1.5rem;
+font-weight: 400;
+margin: 1rem 0 2rem 0;
+}
+.inner-div li {
+font-size: 1rem;
+ margin-top: 0.5rem;
+ list-style: none;
+
+}
+
+input{
+cursor: pointer;
+}
+
+#submit,.btn{
+padding: 1rem 8rem;
+outline: none;
+font-size: 2rem;
+display: block;
+margin: auto;
+text-transform:uppercase;
+color: rgb(1, 8, 14);
+background-color: rgb(16, 47, 251);
+margin-top: 4rem;
+cursor: pointer;
+}
+
+#submit:hover{
+background-color: rgb(84, 84, 234);
+}
+
+
+#showScore h3{
+
+font-size: 3rem;
+text-align: center;
+}
+
+#showScore .btn{
+background-color: rgb(221, 221, 221);
+margin-top: 2rem;
+box-shadow: 0 rem 1rem -0.7rem rgb(1, 11, 19)
+
+}
+#showScore .btn {
+background-color: rgb(80, 216, 78);
+color:rgb(227, 227, 227)
+
+}
+
+.scoreArea{
+display: none;
+}
+</style>
+
+
+<script>
+
+const quizDB = [
+    {
+        question: "Q1 : What is tha full form of HTML?",
+        a: "Hellow to My Lands",
+        b: "Hey Text Markep Lunguage",
+        c: "Hyper Text Makeup Language",
+        d: " Hypertext Markup Language",
+        ans: "ans1"
+    },
+
+{
+    question: "Q2 : What is tha full form of CSS?",
+    a: "Cascading Style Sheets",
+    b: "Cascading Style Sheep",
+    c: "Cascading Style Some",
+    d: " Cascading Shart Sum",
+    ans: "ans1"
+
+},
+
+{
+    question: "Q3 : What is tha full form of HTTP?",
+    a: "Hypertext Transfer Point",
+    b: "Hey Trust Protocol",
+    c: "Hypertext Transfer Portal",
+    d: " Hypertext Transfer Protocol",
+    ans: "ans4" 
+},
+
+{
+    question: "Q4 : What is tha full form of JS?",
+        a: "JavaScript",
+        b: "Javasuperkey",
+        c: "JavaSuqr",
+        d: " JointScript",
+        ans: "ans1"
+},
+
+
+{
+    question: "Q5 : What is tha full form of GST?",
+        a: "Gaverment service text",
+        b: "governer supere time",
+        c: "Goverment super text",
+        d: " govermet service tool",
+        ans: "ans1"
+},
+
+{
+    question: "Q6 : What is tha full form of ISRO?",
+        a: "Indian Sapce Recherch Organization",
+        b: "India Sould Root Off",
+        c: "Indian Space Rserve Open",
+        d: " Indian Space Rechersh OPtimize",
+        ans: "ans1"
+},
+
+{
+    question: "Q7 : What is tha full form of CBI?",
+        a: "Central Bound Infracture",
+        b: "Centeral Bureao of Investigation",
+        c: "Centrel brush investigation",
+        d: " Central Bourd Inter",
+        ans: "ans2"
+},
+
+{
+    question: "Q8 : What is tha full form of CPU?",
+        a: "Sooon Point Unit",
+        b: "Some Print Unit",
+        c: "Centerl Processing Unit",
+        d: " Centeral pool Unit",
+        ans: "ans3"
+},
+
+{
+    question: "Q9 : What is tha full form of ALU?",
+        a: "Arithmetic Logic Unit",
+        b: "Arithmetic looop unit",
+        c: "Amit Loude Until",
+        D: "Arithemeti Lounges Unfrome",
+    
+        ans: "ans1"
+},
+{
+    question: "Q10 : What is tha full form of RA?",
+        a: "Rijvan Anvri",
+        b: "Rijvan anshari",
+        c: "Rijvan Ali",
+        d: " Rijvan Alam",
+        ans: "ans3"
+},
+
+{
+    question: "Q11 : What is tha full form of DA?",
+        a: "Dilshad  Anvri",
+        b: "Dilshad Ali",
+        c: "Dilshad afjal",
+        d: " Dilshad Alam",
+        ans: "ans2"
+},
+{
+    question: "Q10 : What is tha full form of M M A?",
+        a: "Mahfooz Md Anvri",
+        b: "MD Mahfooz Anshare",
+        c: "Mahfooj Md Alam",
+        d: "Mohad Mahfooz Alam",
+        ans: "ans4"
+},
+];
+const question = document.querySelector('.question');
+const option1 = document.querySelector('#option1');
+const option2 = document.querySelector('#option2');
+const option3 = document.querySelector('#option3');
+const option4 = document.querySelector('#option4');
+
+const submit = document.querySelector('#submit');
+
+const answers = document.querySelectorAll('.answer');
+
+const showScore = document.querySelector('#showScore');
+
+let questionCount = 0;
+let score = 0;
+const loadQuestion = () => {
+
+
+    const questionList = quizDB[questionCount];
+    question.innerText = questionList.question;
+
+    option1.innerText = questionList.a;
+    option2.innerText = questionList.b;
+    option3.innerText = questionList.c;
+    option4.innerText = questionList.d;
+}
+loadQuestion();
+
+const getCheckAnswer = () => {
+    let answer;
+
+    answers.forEach((curAnsElem) => {
+        if(curAnsElem.checked){
+            answer = curAnsElem.id;
+        }
+    }); 
+return answer;
+
+};
+
+const deselectAll = () => {
+ answers.forEach((curAnsElem) => curAnsElem.checked = false);
+}
+submit.addEventListener('click', () =>  {
+const checkedAnswer = getCheckAnswer();
+console.log(checkedAnswer);
+
+if(checkedAnswer === quizDB[questionCount].ans){
+    score++;
+
+};
+
+questionCount++;
+
+deselectAll();
+
+if(questionCount < quizDB.length){
+    loadQuestion();
+}else{
+      
+    showScore.innerHTML = `
+    <h3> You scored ${score}/${quizDB.length} ✌</h3>
+
+    <button class="btn" onclick="location.reload()"> play again</button> `;
+    showScore.classList.remove('scoreArea');
+
+        }
+        
+});
+</script>

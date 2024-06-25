@@ -1,0 +1,87 @@
+*{
+
+    margin: 0;
+    padding: 0;
+box-sizing: border-box;
+font-family: "josefin sans", sans-serif;
+font-weight: 300;
+}
+
+html{
+    font-size: 62.%;
+
+}
+
+.main-div{
+
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: rgb(207, 109, 230);
+}
+
+.inner-div{
+
+width: 40vw;
+background-color: antiquewhite;
+padding: 3rem 8rem;
+border-radius: 1rem;
+/* box-shodow 0 1rem 1rem -0.7rem ; */
+}
+
+.inner-div  h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 1rem 0 2rem 0;
+}
+ .inner-div li {
+    font-size: 1rem;
+     margin-top: 0.5rem;
+     list-style: none;
+    
+ }
+
+ input{
+    cursor: pointer;
+ }
+
+ #submit,.btn{
+    padding: 1rem 8rem;
+    outline: none;
+    font-size: 2rem;
+    display: block;
+    margin: auto;
+    text-transform:uppercase;
+    color: rgb(1, 8, 14);
+    background-color: rgb(247, 59, 34);
+    margin-top: 4rem;
+    cursor: pointer;
+ }
+
+ #submit:hover{
+    background-color: rgb(203, 250, 95);
+ }
+
+ 
+ #showScore h3{
+
+    font-size: 3rem;
+    text-align: center;
+ }
+
+ #showScore .btn{
+    background-color: rgb(221, 221, 221);
+    margin-top: 2rem;
+    box-shadow: 0 rem 1rem -0.7rem rgb(1, 11, 19)
+
+ }
+ #showScore .btn {
+    background-color: rgb(80, 216, 78);
+    color:rgb(227, 227, 227)
+    
+ }
+
+ .scoreArea{
+    display: none;
+ }
